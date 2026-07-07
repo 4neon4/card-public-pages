@@ -1,4 +1,4 @@
-# Card public pages
+# KardMego public pages
 
 Static public pages for App Store Connect:
 
