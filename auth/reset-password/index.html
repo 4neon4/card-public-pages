@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open KardMego</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <strong>KardMego</strong>
+        <span>Password reset</span>
+      </div>
+      <nav>
+        <a href="../../privacy.html">Privacy Policy</a>
+        <a href="../../support.html">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Open KardMego</h1>
+      <p>This password reset link is meant to open in the KardMego app.</p>
+      <p>If the app does not open automatically, tap the button below.</p>
+      <p><a class="contact" id="open-app" href="card://reset-password">Open in app</a></p>
+    </main>
+
+    <footer>
+      Copyright © 2026 Yuliia Kazmina. KardMego is not affiliated with any retailer.
+    </footer>
+  </div>
+
+  <script>
+    const deepLink = `card://reset-password${window.location.search}${window.location.hash}`;
+    const button = document.getElementById("open-app");
+    button.href = deepLink;
+    window.setTimeout(() => {
+      window.location.href = deepLink;
+    }, 300);
+  </script>
+</body>
+</html>

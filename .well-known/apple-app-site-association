@@ -6,7 +6,9 @@
         "appID": "MMBDU3HCTR.com.yulia.card",
         "paths": [
           "/auth/reset-password",
-          "/auth/email-confirmed"
+          "/auth/reset-password*",
+          "/auth/email-confirmed",
+          "/auth/email-confirmed*"
         ]
       }
     ]
