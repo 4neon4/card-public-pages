@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zásady ochrany soukromí KardMego</title>
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="../../legal.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <strong>KardMego</strong>
+        <span>Právní dokumenty</span>
+      </div>
+      <nav aria-label="Právní navigace">
+        <a href="../../../index.html">Domů</a>
+        <a href="../terms/">Podmínky</a>
+        <a href="../privacy/">Soukromí</a>
+        <a href="../disclaimer/">Prohlášení</a>
+        <a href="../../delete-account/">Smazání účtu</a>
+        <a href="../../privacy/">English</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="legal-document">
+        <h1>Zásady ochrany soukromí KardMego</h1>
+        <p class="updated">Datum účinnosti: 3. září 2026</p>
+        <h2>1. Shrnutí srozumitelným jazykem</h2>
+        <p>KardMego je organizér věrnostních karet a nákupů. Zpracováváme pouze údaje potřebné pro funkce, které si zvolíte, pro zabezpečení a pro dodržení právních povinností. Současná aplikace neobsahuje reklamu, sledování napříč aplikacemi ani obecné SDK pro produktovou analytiku.</p>
+        <p>V současné implementaci:</p>
+        <ul><li>lze prostřednictvím našeho backendu Supabase synchronizovat údaje o účtu, kartě, čárovém kódu, rodině, sdílení, nákupním seznamu a historii nákupů;</li><li>fotografie přední strany karty a účtenek zůstávají lokálně v zařízení; pokud výslovně přidáte fotografii k položce způsobilého nákupního seznamu synchronizovaného s cloudem, zpracovaná fotografie se uloží do soukromého cloudového úložiště, aby ji mohli zobrazit aktuálně oprávnění účastníci seznamu;</li><li>zdrojová fotografie položky se před nahráním zpracuje v zařízení, zbaví vložených metadat EXIF/GPS, převede do WebP a omezí na 768 × 768 pixelů a 256 000 bajtů;</li><li>skenování účtenek, rozpoznávání textu a oříznutí obrázků probíhá v zařízení;</li><li>poloha v popředí může být převedena na zemi, město a přibližnou oblast mřížky pro funkce země obchodu a ASK/GO; KardMego ve své databázi neukládá nezpracovanou zeměpisnou šířku ani délku;</li><li>oprávnění lze odmítnout nebo odvolat, ale související funkce pak může přestat fungovat; a</li><li>o odstranění účtu můžete požádat v aplikaci.</li></ul>
+        <p>Toto shrnutí nenahrazuje úplné informace uvedené níže.</p>
+        <h2>2. Kdo je správcem vašich údajů</h2>
+        <p>Správcem odpovědným za KardMego je:</p>
+        <p><code>Yuliia Kazmina, podnikající fyzická osoba (OSVČ)</code> <code>Podbělohorská 1341/23, Smíchov, 15000 Praha 5, Česká republika</code> IČO/DPH: <code>IČO 17578931; není plátcem DPH</code> E-mail: <code>yumikami.app@gmail.com</code></p>
+        <p>Tyto Zásady se vztahují na mobilní aplikaci KardMego, služby účtu a veřejný web KardMego. Obchodník nebo provozovatel věrnostního programu je samostatným správcem svého programu a svých transakcí.</p>
+        <h2>3. Údaje, které zpracováváme</h2>
+        <h3>3.1 Údaje o účtu a ověření</h3>
+        <p>Když vytvoříte nebo používáte účet, zpracováváme vaši e-mailovou adresu, identifikátor uživatele Supabase, informace o ověření a relaci, stav potvrzení e-mailu a resetu hesla, časové údaje účtu a základní nastavení profilu. Ověření hesla zajišťuje poskytovatel ověření; KardMego by nemělo zaznamenávat ani ukládat vaše heslo v otevřeném textu.</p>
+        <h3>3.2 Údaje o identitě hosta</h3>
+        <p>Je-li k dispozici režim hosta, zařízení vytvoří identifikátor karty hosta a tajný údaj. Do backendu lze uložit hash tohoto tajného údaje, zobrazované jméno, identifikátor hosta, rodinné vztahy a informaci o poslední aktivitě. Původní tajný údaj hosta je uchován v bezpečném úložišti zařízení.</p>
+        <h3>3.3 Údaje o kartách a čárových kódech</h3>
+        <p>Zpracováváme údaje, které ke kartě přidáte, například název či klíč obchodu, hodnotu a typ čárového nebo QR kódu, poznámky, stav oblíbené karty, vlastníka, režim přístupu, nastavení sdílení s rodinou a časové údaje synchronizace. Fotografie nebo logo přední strany karty je v současnosti uloženo pouze v lokálních souborech aplikace. Hodnota čárového kódu může identifikovat účet ve věrnostním programu třetí strany nebo k němu umožnit přístup, proto s ní zacházejte jako s citlivým údajem, i když obvykle nejde o zvláštní kategorii osobních údajů podle GDPR.</p>
+        <h3>3.4 Údaje o rodině a sdílení</h3>
+        <p>Zpracováváme údaje o členství v rodině a záznamy o pozvání či převzetí, žádosti o sdílení, obchod a stav žádosti, identifikátory vlastníka a příjemce sdíleného přístupu, délku a vypršení přístupu, potvrzení či poděkování ke kartě a informace potřebné k zobrazení sdílené karty. Podle vašeho nastavení může příjemce vidět název obchodu, hodnotu a typ čárového či QR kódu, poznámky a stav sdílení.</p>
+        <h3>3.5 Údaje o nákupech a účtenkách</h3>
+        <p>Zpracováváme identifikátory nákupních seznamů, spojení s kartou či obchodem, názvy produktů, kategorie, text o množství a jednotce, stav a čas dokončení, údaje o řazení, položky archivu, čas dokončení, poznámky a text součtu účtenky. Fotografie účtenek zůstávají lokálně v zařízení. Pokud výslovně přidáte fotografii položky do způsobilého seznamu synchronizovaného s cloudem, aplikace ji zpracuje v zařízení, odstraní vložená metadata EXIF/GPS, převede ji do WebP a omezí na 768 × 768 pixelů a 256 000 bajtů. Původní soubor se touto funkcí nenahrává. Supabase ukládá metadata fotografie chráněná řízením přístupu a zpracované bajty jsou uloženy v soukromém úložišti Cloudflare R2. Operační systém může obrázky dočasně zpracovat při použití kamery, výběru obrázku nebo rozhraní pro sdílení.</p>
+        <h3>3.6 Údaje o poloze a zemi obchodu</h3>
+        <p>Pokud povolíte polohu v popředí, zařízení může získat souřadnice z operačního systému a provést zpětné geokódování. KardMego ukládá nebo přenáší vybraný či zjištěný kód země, normalizovaný klíč města, klíč přibližné oblasti mřížky (v současnosti založené na buňkách o velikosti přibližně 0,02 stupně), čas aktualizace polohy a zdroj polohy. Nezpracovaná zeměpisná šířka a délka se v současné implementaci do databáze KardMego neukládají.</p>
+        <p>Přibližné údaje o poloze se používají pro nastavení země obchodu a párování žádostí ASK/GO. Poloha se získává pouze při používání příslušné funkce v popředí; současná aplikace nevyžaduje polohu na pozadí.</p>
+        <h3>3.7 Údaje o zařízení, oprávněních a oznámeních</h3>
+        <p>Zpracováváme stav oprávnění operačního systému a předvolby aplikace v zařízení. Jsou-li oznámení push povolena a podporována, může být uložen token push zařízení, platforma a propojení s účtem, aby bylo možné doručit oznámení Služby. Android v současnosti pro některé události používá také místní oznámení. Apple, Google a výrobci zařízení nezávisle zpracovávají údaje potřebné pro poskytování svých platforem a služeb push.</p>
+        <h3>3.8 Lokální úložiště a diagnostika</h3>
+        <p>Aplikace používá šifrované nebo zabezpečené úložiště zařízení pro relace, přijetí právních dokumentů, přihlašovací údaje hosta, předvolby jazyka, motivu a země a lokální snímek polohy; lokální soubory a databázové úložiště používá pro karty, obrázky, média k nákupům a mezipaměť. Produkční infrastruktura může vytvářet bezpečnostní, přístupové a chybové protokoly obsahující časové údaje, síťová či technická metadata zařízení, identifikátory požadavků a omezené identifikátory účtu. Tyto záznamy používáme k provozu, zabezpečení a řešení problémů Služby.</p>
+        <h3>3.9 Komunikace s podporou</h3>
+        <p>Pokud nás kontaktujete, zpracováváme vaše jméno a kontaktní údaje, zprávu, přílohy, údaje o účtu nebo zařízení, které poskytnete, a historii našich odpovědí. Neposílejte hesla, zbytečně úplné hodnoty čárových kódů, zdravotní informace ani jiný citlivý obsah.</p>
+        <h2>4. Odkud údaje získáváme</h2>
+        <p>Údaje získáváme:</p>
+        <ul><li>přímo od vás, když vytvoříte účet, přidáte kartu nebo seznam, sdílíte přístup, výslovně vyberete obrázek pro lokální použití nebo nahrajete fotografii položky či kontaktujete podporu;</li><li>z vašeho zařízení a operačního systému, když udělíte oprávnění nebo použijete funkci;</li><li>od jiných uživatelů, když vás pozvou, přidají do rodiny, požádají o kartu, sdílejí s vámi kartu nebo aktualizují sdílený seznam; a</li><li>od poskytovatelů služeb, kteří zajišťují ověření, hosting, databázi, e-mail, oznámení a bezpečnostní funkce.</li></ul>
+        <p>Pokud poskytnete údaje jiné osoby, musíte k tomu mít oprávnění a měli byste zajistit, aby tato osoba dostala přiměřenou informaci o sdílení.</p>
+        <h2>5. Účely a právní základy</h2>
+        <p>Při zpracování osobních údajů podle GDPR mohou platit tyto právní základy.</p>
+        <div class="table-wrap"><table><thead><tr><th>Účel</th><th>Typické údaje</th><th>Právní základ podle GDPR</th></tr></thead><tbody><tr><td data-label="Účel">Vytvoření a ověření účtu; zabezpečení relací</td><td data-label="Typické údaje">E-mail, ID uživatele, údaje o relaci a zabezpečení</td><td data-label="Právní základ podle GDPR">Plnění smlouvy; oprávněné zájmy na zabezpečení účtu</td></tr><tr><td data-label="Účel">Poskytování karet, zobrazení čárových kódů, cloudové synchronizace, seznamů, historie a požadovaných funkcí</td><td data-label="Typické údaje">Údaje o kartě či čárovém kódu, nákupech a nastavení</td><td data-label="Právní základ podle GDPR">Plnění smlouvy</td></tr><tr><td data-label="Účel">Poskytování režimu hosta</td><td data-label="Typické údaje">ID hosta/hash tajného údaje, zobrazované a aktivitní údaje</td><td data-label="Právní základ podle GDPR">Kroky vyžádané před uzavřením smlouvy nebo bez ní; oprávněné zájmy na poskytování a zabezpečení přístupu hosta</td></tr><tr><td data-label="Účel">Poskytování rodiny, ASK/GO a sdílení karet</td><td data-label="Typické údaje">Členství, žádosti, záznamy přístupu, vybrané údaje o kartě, přibližná oblast</td><td data-label="Právní základ podle GDPR">Plnění smlouvy a vámi požadované úkony; oprávněné zájmy na předcházení zneužití</td></tr><tr><td data-label="Účel">Určení země obchodu a blízkého párování</td><td data-label="Typické údaje">Poloha zařízení v popředí převedená na zemi, město a oblast</td><td data-label="Právní základ podle GDPR">Souhlas prostřednictvím volitelného oprávnění zařízení, pokud je vyžadován; plnění požadované funkce polohy</td></tr><tr><td data-label="Účel">Odesílání oznámení Služby</td><td data-label="Typické údaje">Token push, účet a údaje o události</td><td data-label="Právní základ podle GDPR">Plnění smlouvy pro podstatná oznámení Služby; souhlas či oprávnění pro volitelná oznámení, pokud je vyžadováno</td></tr><tr><td data-label="Účel">Předcházení podvodu, zneužití a bezpečnostním incidentům</td><td data-label="Typické údaje">Účet, přístup, sdílení, zařízení a údaje protokolu</td><td data-label="Právní základ podle GDPR">Oprávněné zájmy na ochraně uživatelů a Služby; případně právní povinnosti</td></tr><tr><td data-label="Účel">Vyřizování podpory a žádostí o práva</td><td data-label="Typické údaje">Kontakt, ověření účtu a korespondence</td><td data-label="Právní základ podle GDPR">Plnění smlouvy; právní povinnosti; oprávněné zájmy na vyřizování podpory</td></tr><tr><td data-label="Účel">Uchování právních záznamů a záznamů o přijetí</td><td data-label="Typické údaje">Verze dokumentu, čas, účet, jazyk a hash obsahu</td><td data-label="Právní základ podle GDPR">Právní povinnosti; oprávněné zájmy na prokázání souladu a vzniku smlouvy</td></tr><tr><td data-label="Účel">Uplatnění nebo obhajoba právních nároků</td><td data-label="Typické údaje">Relevantní údaje o účtu, transakcích, sdílení a korespondenci</td><td data-label="Právní základ podle GDPR">Oprávněné zájmy; právní povinnosti</td></tr></tbody></table></div>
+        <p>Pokud se opíráme o oprávněné zájmy, posuzujeme nezbytnost a vyvažujeme účel s vašimi právy. Proti zpracování můžete vznést námitku, jak je popsáno níže. Pokud je právním základem souhlas, můžete jej kdykoli odvolat, aniž by to ovlivnilo dřívější zákonné zpracování. Odmítnutí volitelného souhlasu nezablokuje nesouvisející funkce.</p>
+        <p>Jedno přijetí těchto Zásad ochrany soukromí nepoužíváme jako souhlas se všemi druhy zpracování.</p>
+        <h2>6. Jak funguje sdílení a kdo údaje dostává</h2>
+        <h3>6.1 Ostatní uživatelé KardMego</h3>
+        <p>Údaje zpřístupňujeme členům rodiny, účastníkům žádosti a příjemcům pouze podle vámi zvolené funkce a přístupu. Sdílený přístup ke kartě může zpřístupnit název obchodu, hodnotu či typ čárového/QR kódu, poznámky a časové nebo stavové údaje. Účastníci, kteří mají právě přístup ke sdílenému nákupnímu seznamu, mohou vidět a upravovat relevantní informace seznamu a zobrazit jeho aktivní fotografie položek. Server kontroluje oprávnění při každém dočasném povolení ke stažení; odebrání rodinného přístupu nebo přístupu k seznamu zablokuje nová serverová povolení po synchronizaci změny. Žadatelé a vlastníci karty mohou vidět stav žádosti a omezené profilové či zobrazované informace.</p>
+        <h3>6.2 Zpracovatelé a poskytovatelé platforem</h3>
+        <p>K provozu Služby používáme poskytovatele, mimo jiné v těchto kategoriích:</p>
+        <ul><li>Supabase pro ověření, databázové záznamy, řízení přístupu, Edge Functions a související infrastrukturu;</li><li>Cloudflare Workers a soukromé objektové úložiště R2 pro nahrávání, doručování a čištění zpracovaných fotografií položek nákupního seznamu;</li><li>infrastrukturu pro doručování e-mailů s potvrzením a resetem hesla;</li><li>Apple a Google pro distribuci aplikace, služby operačního systému, oznámení, oprávnění a volitelné zálohování zařízení;</li><li>poskytovatele hostingu webu a domény;</li><li>poskytovatele podpory, zabezpečení, protokolování nebo monitorování, pokud jsou zapnuti.</li></ul>
+        <p>Zpracovatelé smějí údaje používat pouze podle našich pokynů a s vhodnými smluvními zárukami, s výjimkou případů, kdy poskytovatel jedná nezávisle podle práva nebo vlastních podmínek platformy.</p>
+        <h3>6.3 Orgány a zákonní příjemci</h3>
+        <p>Informace můžeme zpřístupnit, pokud je to přiměřeně nutné pro dodržení práva, závazného příkazu, ochranu práv nebo bezpečnosti, vyšetření zneužití nebo uplatnění či obhajobu právních nároků. Požadavky posoudíme a zpřístupníme jen to, co je zákonně vyžadováno.</p>
+        <h3>6.4 Převod podnikání</h3>
+        <p>Pokud je Služba nebo provozovatel reorganizován, sloučen nebo převeden, mohou být relevantní údaje převedeny s vhodným oznámením, důvěrností a zárukami ochrany údajů. Osobní údaje neprodáváme.</p>
+        <h2>7. Mezinárodní předávání</h2>
+        <p>Někteří poskytovatelé mohou zpracovávat údaje mimo EHP nebo vaši zemi. Pokud se uplatní omezení GDPR pro předávání, použijeme použitelný zákonný mechanismus předání, například rozhodnutí o odpovídající ochraně, standardní smluvní doložky s vhodnými doplňujícími opatřeními nebo jiný mechanismus povolený právem. Pro informace o zárukách relevantních pro vaše údaje nás můžete kontaktovat.</p>
+        <p>Primárním regionem aktuálního projektu Supabase je <code>eu-west-1</code> (Irsko). Jiní poskytovatelé mohou být usazeni nebo zpracovávat údaje jinde podle svých podmínek platformy a informačních oznámení.</p>
+        <h2>8. Doba uchování</h2>
+        <p>Osobní údaje uchováváme pouze po dobu nezbytnou pro uvedený účel, právní povinnosti, zabezpečení a nároky.</p>
+        <p>Zejména:</p>
+        <ul><li>aktivní údaje o účtu, kartě a aktuálním nákupu: po dobu aktivního účtu či funkce, poté jsou odstraněny po požadavku na odstranění účtu nebo položky, s výhradou krátkých provozních a záložních dob;</li><li>lokální fotografie přední strany karty a účtenek: dokud neodstraníte obrázek, kartu nebo historii, nevymažete data aplikace, neodinstalujete aplikaci nebo neodstraníte účet postupem, který odstraňuje lokální soubory;</li><li>aktivní fotografie položek synchronizované s cloudem: dokud je příslušná položka aktivní a fotografii potřebuje; po nahrazení či odstranění nebo po dokončení či odstranění položky/seznamu skončí přístup uživatelů okamžitě a starý soukromý objekt R2 je naplánován k trvalému odstranění do 24 hodin;</li><li>nedokončená nahrávání fotografií položek: nikdy se nezobrazují jako aktivní a jsou naplánována k trvalému odstranění nejpozději do 24 hodin poté, co zastarají nebo jsou zrušena;</li><li>offline mezipaměť fotografií položek: je uložena v soukromých souborech aplikace, dokud je fotografie dostupná; odstraní se po úspěšném snímku nebo kontrole přístupu potvrzující nahrazení, odstranění či ztrátu přístupu, během podporovaného čištění účtu, po vymazání dat aplikace nebo po odinstalaci. Zařízení, které zůstane offline, může stávající mezipaměť uchovat do opětovného připojení nebo odstranění dat aplikace;</li><li>dokončené archivy nákupů: automatizované čištění je nastaveno tak, aby odstranilo položky starší než 90 dní a uchovalo nejvýše 30 nejnovějších položek na kartu;</li><li>žádosti o sdílení: čekající žádosti končí po 7 dnech; neodkazované žádosti starší než 90 dní jsou odstraněny;</li><li>dočasný sdílený přístup: při vypršení se vypne, přičemž záznamy přístupu se uchovávají jen podle potřeby pro zabezpečení a právní nároky;</li><li>profily hosta: do odstranění nebo propojení s účtem;</li><li>tokeny push: do vypnutí oznámení, zneplatnění tokenu nebo odstranění účtu;</li><li>záznamy o přijetí právních dokumentů: po dobu potřebnou k prokázání přijetí, dodržení práva a uplatnění či obhajobě nároků;</li><li>protokoly podpory a zabezpečení: jen po dobu nutnou k poskytování podpory, ochraně Služby a plnění právních povinností; a</li><li>zálohy: pokud údaje po odstranění zůstávají v chráněných zálohách, jsou odděleny od běžného použití a odstraněny v příslušném cyklu zálohování.</li></ul>
+        <h2>9. Odstranění účtu a údajů</h2>
+        <p>Držitelé účtu mohou požádat o odstranění v aplikaci a na <code>https://kardmego.app/legal/delete-account</code>. K zabránění neoprávněnému odstranění můžeme ověřit totožnost. Funkce odstranění odstraní účet pro ověření a související záznamy backendu, včetně tokenů zařízení, nákupních dat, profilu, souvisejících záznamů účtu a profilu hosta převzatého tímto účtem. Po úspěšné odpovědi se aplikace pokusí odstranit zjištěnou místní mezipaměť účtu, média, přihlašovací údaje hosta, lokální mezipaměť právních dokumentů, předvolby jazyka, motivu, země a polohy a lokální relaci. Je-li toto lokální vyčištění přerušeno nebo není dostupné úložiště zařízení, mohou některé lokální údaje zůstat, dokud se vyčištění nezdaří nebo dokud nevymažete data aplikace či aplikaci neodinstalujete. Tento postup nepovažujeme za atomický vůči pádu aplikace ani za absolutní záruku místního vymazání.</p>
+        <p>Odstranění nemůže odstranit:</p>
+        <ul><li>informace, které jiný uživatel nezávisle zkopíroval nebo uchoval mimo KardMego;</li><li>záznamy, které musíme dočasně uchovávat pro dodržení práva, řešení sporů, předcházení podvodu nebo prokázání právního jednání;</li><li>údaje v šifrovaných zálohách do uplynutí běžného cyklu záloh, pokud jsou odděleny od běžného použití; nebo</li><li>údaje nezávisle spravované obchodníkem, společností Apple, Google nebo jinou třetí stranou.</li></ul>
+        <p>Odstranění jedné karty, fotografie nebo nákupního záznamu by jej mělo odstranit z aktivního úložiště aplikace podle dané funkce. Pokud ovládací prvek v aplikaci není dostupný, kontaktujte nás.</p>
+        <h2>10. Vaše práva na ochranu údajů</h2>
+        <p>Podle platného práva můžete mít právo:</p>
+        <ul><li>získat informace a kopii svých osobních údajů;</li><li>opravit nepřesné nebo neúplné údaje;</li><li>požádat o výmaz;</li><li>omezit zpracování;</li><li>získat údaje, které jste poskytli, ve strukturovaném, běžně používaném a strojově čitelném formátu a předat je jinému správci, pokud se uplatní přenositelnost;</li><li>vznést námitku proti zpracování založenému na oprávněných zájmech;</li><li>kdykoli odvolat souhlas pro budoucí zpracování; a</li><li>podat stížnost u dozorového úřadu.</li></ul>
+        <p>Pro uplatnění práva kontaktujte <code>yumikami.app@gmail.com</code> nebo použijte dostupné ovládací prvky v aplikaci. Popište účet a požadavek. Můžeme požádat o přiměřené ověření totožnosti. Odpovíme ve lhůtě vyžadované právem, podle GDPR obvykle do jednoho měsíce, s výhradou povoleného prodloužení. Vysvětlíme každé zákonné odmítnutí a možnosti stížnosti.</p>
+        <p>Českým dozorovým úřadem je Úřad pro ochranu osobních údajů (ÚOOÚ), Pplk. Sochora 27, 170 00 Praha 7, Česká republika; e-mail <code>posta@uoou.gov.cz</code>; web <code>https://uoou.gov.cz/</code>.</p>
+        <h2>11. Oprávnění a volby</h2>
+        <ul><li><strong>Poloha:</strong> odmítněte nebo odvolejte ji v nastavení zařízení; místo toho může nastavení země obchodu a blízkého párování používat ruční výběr země.</li><li><strong>Kamera/knihovna fotografií:</strong> odmítněte nebo odvolejte ji; fotografování nebo výběr obrázků karty, položky či účtenky nebude dostupný.</li><li><strong>Oznámení:</strong> vypněte je v nastavení zařízení; pro zobrazení žádostí či aktualizací může být nutné aplikaci otevřít.</li><li><strong>Sdílení:</strong> změňte přístup ke kartě, odvolejte příjemce nebo odeberte člena rodiny pomocí příslušných ovládacích prvků.</li><li><strong>Odstranění účtu:</strong> použijte obrazovku účtu v aplikaci nebo externí zdroj pro odstranění.</li></ul>
+        <p>Poskytovatelé operačních systémů ovládají rozhraní svých oprávnění a mohou uchovávat vlastní záznamy platformy.</p>
+        <h2>12. Zabezpečení</h2>
+        <p>Používáme opatření určená k ochraně údajů, včetně šifrovaného síťového přenosu, zabezpečeného úložiště zařízení pro tajné údaje relace a hosta, kontrol přístupu k databázi, zabezpečení na úrovni řádků a omezených privilegovaných operací. Žádný systém není zcela bezpečný a nemůžeme zaručit absolutní bezpečnost.</p>
+        <p>Zabezpečte své zařízení a e-mailový účet, instalujte aktualizace, nesdílejte přihlašovací údaje a odvolejte přístup ke kartě, který již není potřeba. Pokud máte podezření na neoprávněný přístup, kontaktujte <code>yumikami.app@gmail.com</code>. Pokud to vyžaduje právo, vyrozumíme dotčené uživatele a orgány.</p>
+        <h2>13. Děti</h2>
+        <p>KardMego není určeno dětem mladším 16 let. Vědomě nevytváříme účty pro děti pod tímto věkem. Pokud se domníváte, že dítě poskytlo údaje bez platného oprávnění, kontaktujte nás, abychom mohli věc prověřit a údaje odstranit, pokud to vyžaduje právo.</p>
+        <h2>14. Automatizovaná rozhodnutí a profilování</h2>
+        <p>KardMego může kategorizovat nákupní položky nebo párovat žádosti s využitím informací o obchodě a přibližné poloze. Současná Služba nečiní rozhodnutí založená výhradně na automatizovaném zpracování, která by pro vás měla právní nebo obdobně významné účinky, a nepoužívá osobní údaje pro reklamní profily.</p>
+        <p>Pokud se to změní, před zapnutím změny poskytneme informace, záruky a volby vyžadované právem.</p>
+        <h2>15. Cookies, analytika a sledování</h2>
+        <p>Nativní aplikace v současnosti nepoužívá reklamní cookies, reklamní identifikátory, sledování napříč aplikacemi ani obecné SDK pro produktovou analytiku. SecureStore, lokální soubory a databáze aplikace se používají pro nezbytné funkce aplikace a jsou popsány výše.</p>
+        <p>Web KardMego bude mít samostatné oznámení o cookies a technologiích podle své skutečné konfigurace. Nezbytné technologie mohou fungovat bez volitelného souhlasu, pokud to právo umožňuje. Volitelná analytika, reklama nebo vložený obsah třetích stran se nenačtou před platným souhlasem, pokud je souhlas vyžadován. Odmítnutí musí být stejně snadné jako přijetí a volby musí být odvolatelné.</p>
+        <p>Pokud bude do aplikace přidáno SDK pro analytiku, hlášení pádů, reklamu, atribuci nebo sledování, aktualizujeme tyto Zásady a informace v obchodě a před volitelným sledováním získáme každý vyžadovaný souhlas nebo oprávnění Apple App Tracking Transparency.</p>
+        <h2>16. Změny těchto Zásad</h2>
+        <p>Zobrazíme aktuální verzi a datum účinnosti. Podstatné změny budou oznámeny v aplikaci nebo jiným vhodným způsobem před účinností, pokud to právo vyžaduje. Předchozí verze budou archivovány na <code>/legal/archive/</code>.</p>
+        <p>Aktualizace Zásad ochrany soukromí sama o sobě nezmění volitelné zpracování na zákonný souhlas. Pokud nový účel vyžaduje souhlas, vyžádáme si jej samostatně.</p>
+        <h2>17. Kontakt a stížnosti</h2>
+        <p>Správce: <code>Yuliia Kazmina, podnikající fyzická osoba (OSVČ), IČO 17578931</code> Dotazy na soukromí a žádosti o práva: <code>yumikami.app@gmail.com</code> Poštovní adresa: <code>Podbělohorská 1341/23, Smíchov, 15000 Praha 5, Česká republika</code> Podpora: <code>yumikami.app@gmail.com</code> Dozorový úřad: <code>Úřad pro ochranu osobních údajů (ÚOOÚ), Pplk. Sochora 27, 170 00 Praha 7, Česká republika; posta@uoou.gov.cz; https://uoou.gov.cz/</code></p>
+        <p>Máte-li obavu, kontaktujte nás nejprve, abychom se ji pokusili vyřešit. Vždy si zachováváte právo obrátit se na příslušný dozorový úřad.</p>
+      </article>
+    </main>
+
+    <footer>
+      <span>Copyright © 2026 Yuliia Kazmina. KardMego není spojen s žádným obchodníkem.</span>
+      <nav class="footer-links" aria-label="Odkazy v patičce">
+        <a href="../../../support.html">Podpora</a>
+        <a href="../../delete-account/">Smazání účtu</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KardMego Privacy Policy</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../legal.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <strong>KardMego</strong>
+        <span>Legal documents</span>
+      </div>
+      <nav aria-label="Legal navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../terms/">Terms</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="../disclaimer/">Disclaimer</a>
+        <a href="../delete-account/">Account deletion</a>
+        <a href="../cs/privacy/">Česky</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="legal-document">
+        <h1>KardMego Privacy Policy</h1>
+        <p class="updated">Effective date: 3 September 2026</p>
+        <h2>1. Plain-language summary</h2>
+        <p>KardMego is a loyalty-card and shopping organiser. We process only the data needed for the features you choose, security and legal compliance. The current app does not include advertising, cross-app tracking or general product-analytics SDKs.</p>
+        <p>In the current implementation:</p>
+        <ul><li>account, card, barcode, family, sharing, shopping-list and shopping-history records can be synchronised through our Supabase backend;</li><li>card-front and receipt photos remain local to your device; when you explicitly add a photo to an eligible cloud-synchronised shopping-list item, the processed item photo is stored in private cloud storage so currently authorised list participants can view it;</li><li>the item-photo source is processed on the device, stripped of embedded EXIF/GPS metadata, converted to WebP and limited to 768 × 768 pixels and 256,000 bytes before upload;</li><li>receipt scanning/text recognition and image cropping are performed on the device;</li><li>foreground location can be converted into country, city and an approximate grid area for store-country and ASK/GO functions; KardMego does not store raw latitude and longitude in its database;</li><li>permissions can be refused or revoked, but the related feature may stop working; and</li><li>you can request account deletion in the app.</li></ul>
+        <p>This summary does not replace the full notice below.</p>
+        <h2>2. Who controls your data</h2>
+        <p>The controller responsible for KardMego is:</p>
+        <p><code>Yuliia Kazmina, entrepreneur-natural person (OSVČ)</code> <code>Podbělohorská 1341/23, Smíchov, 15000 Praha 5, Czech Republic</code> Company ID/VAT: <code>IČO 17578931; not registered as a VAT/DPH payer</code> Email: <code>yumikami.app@gmail.com</code></p>
+        <p>This Policy applies to the KardMego mobile application, account services and public KardMego website. A retailer or loyalty-programme operator is a separate controller for its own programme and transactions.</p>
+        <h2>3. Data we process</h2>
+        <h3>3.1 Account and authentication data</h3>
+        <p>When you create or use an account, we process your email address, Supabase user identifier, authentication/session information, email-confirmation and password-reset status, account timestamps and basic profile settings. Password verification is handled by the authentication provider; KardMego should not log or store your plaintext password.</p>
+        <h3>3.2 Guest identity data</h3>
+        <p>If guest mode is available, the device creates a guest card identifier and secret. A hash of the secret, display name, guest identifier, family relationships and last-seen information can be stored in the backend. The original guest secret is kept in secure device storage.</p>
+        <h3>3.3 Card and barcode data</h3>
+        <p>We process information you add to a card, such as store name/key, barcode or QR value and type, notes, favourite status, owner, access mode, family-sharing setting, and synchronisation timestamps. A card-front photo/logo is currently stored only in the app&#39;s local files. A barcode value can identify or provide access to a third-party loyalty account, so it should be treated as sensitive even though it is not normally a special category of data under the GDPR.</p>
+        <h3>3.4 Family and sharing data</h3>
+        <p>We process family membership and invitation/claim records, share requests, request store and status, shared-access owner and recipient identifiers, access duration and expiry, card acknowledgements/thanks, and information required to display a shared card. Depending on your settings, a recipient can see the store name, barcode/QR value and type, notes, and sharing status.</p>
+        <h3>3.5 Shopping and receipt records</h3>
+        <p>We process shopping-list identifiers, card/store association, product names, categories, quantity/unit text, completion status and time, sorting information, archive entries, finish time, notes and receipt-total text. Receipt photos remain local to the device. If you explicitly add an item photo to an eligible cloud-synchronised list, the app processes the image on the device, strips embedded EXIF/GPS metadata, converts it to WebP and limits it to 768 × 768 pixels and 256,000 bytes. The original file is not uploaded by this feature. Supabase stores access-controlled photo metadata and the processed bytes are stored in a private Cloudflare R2 bucket. The operating system may temporarily process images when you use its camera, picker or share interface.</p>
+        <h3>3.6 Location and store-country data</h3>
+        <p>When you allow foreground location, the device may obtain coordinates from the operating system and reverse-geocode them. KardMego stores or transmits the selected/detected country code, a normalised city key, an approximate grid-area key (currently based on roughly 0.02-degree cells), location-update time and location source. Raw latitude and longitude are not stored in the KardMego database by the current implementation.</p>
+        <p>Approximate location data is used for the store-country setting and ASK/GO request matching. Location is obtained only while using the relevant foreground function; the current app does not request background location.</p>
+        <h3>3.7 Device, permission and notification data</h3>
+        <p>We process operating-system permission state and app preferences on the device. If push notifications are enabled and supported, a device push token, platform and account association may be stored so a Service notification can be delivered. Android currently also uses local notifications for certain events. Apple, Google and device manufacturers independently process data needed to provide their platforms and push services.</p>
+        <h3>3.8 Local storage and diagnostics</h3>
+        <p>The app uses encrypted/secure device storage for sessions, legal acceptance, guest credentials, language/theme/country preferences and a local location snapshot, and local files/database storage for cards, images, shopping media and caches. Production infrastructure may create security, access and error logs containing timestamps, network/device metadata, request identifiers and limited account identifiers. We use these records to operate, secure and troubleshoot the Service.</p>
+        <h3>3.9 Support communications</h3>
+        <p>If you contact us, we process your name/contact details, message, attachments, account or device details you provide, and our response history. Do not send passwords, unnecessary full barcode values, medical information or other sensitive content.</p>
+        <h2>4. Where data comes from</h2>
+        <p>We receive data:</p>
+        <ul><li>directly from you when you create an account, add a card or list, share access, explicitly select an image for local use or upload an item photo, or contact support;</li><li>from your device and operating system when you grant permission or use a feature;</li><li>from other users when they invite you, add you to a family, request a card, share a card with you or update a shared list; and</li><li>from service providers that operate authentication, hosting, database, email, notifications and security functions.</li></ul>
+        <p>If you provide another person&#39;s data, you must have authority to do so and should ensure the person receives appropriate information about the sharing.</p>
+        <h2>5. Purposes and legal bases</h2>
+        <p>The following legal bases may apply when we process personal data under the GDPR.</p>
+        <div class="table-wrap"><table><thead><tr><th>Purpose</th><th>Typical data</th><th>GDPR legal basis</th></tr></thead><tbody><tr><td data-label="Purpose">Create and authenticate an account; keep sessions secure</td><td data-label="Typical data">Email, user ID, session/security data</td><td data-label="GDPR legal basis">Performance of a contract; legitimate interests in account security</td></tr><tr><td data-label="Purpose">Provide cards, barcode display, cloud sync, lists, history and requested features</td><td data-label="Typical data">Card/barcode, shopping and settings data</td><td data-label="GDPR legal basis">Performance of a contract</td></tr><tr><td data-label="Purpose">Provide guest mode</td><td data-label="Typical data">Guest ID/secret hash, display and activity data</td><td data-label="GDPR legal basis">Steps requested before/without account contract; legitimate interests in providing and securing guest access</td></tr><tr><td data-label="Purpose">Provide family, ASK/GO and card sharing</td><td data-label="Typical data">Membership, requests, access records, selected card data, approximate area</td><td data-label="GDPR legal basis">Performance of a contract and actions you request; legitimate interests in preventing misuse</td></tr><tr><td data-label="Purpose">Determine store country and nearby matching</td><td data-label="Typical data">Foreground device location converted to country/city/area</td><td data-label="GDPR legal basis">Consent through the optional device permission where required; performance of the requested location feature</td></tr><tr><td data-label="Purpose">Send Service notifications</td><td data-label="Typical data">Push token, account and event data</td><td data-label="GDPR legal basis">Performance of a contract for essential service messages; consent/permission for optional notifications where required</td></tr><tr><td data-label="Purpose">Prevent fraud, abuse and security incidents</td><td data-label="Typical data">Account, access, sharing, device and log data</td><td data-label="GDPR legal basis">Legitimate interests in protecting users and the Service; legal obligations where applicable</td></tr><tr><td data-label="Purpose">Respond to support and rights requests</td><td data-label="Typical data">Contact, account verification and correspondence</td><td data-label="GDPR legal basis">Performance of a contract; legal obligations; legitimate interests in handling support</td></tr><tr><td data-label="Purpose">Keep legal and acceptance records</td><td data-label="Typical data">Document version, timestamp, account/locale/content hash</td><td data-label="GDPR legal basis">Legal obligations; legitimate interests in demonstrating compliance and contract formation</td></tr><tr><td data-label="Purpose">Establish or defend legal claims</td><td data-label="Typical data">Relevant account, transaction, sharing and correspondence records</td><td data-label="GDPR legal basis">Legitimate interests; legal obligations</td></tr></tbody></table></div>
+        <p>Where we rely on legitimate interests, we assess necessity and balance the purpose against your rights. You may object as described below. Where consent is the legal basis, you can withdraw it at any time without affecting earlier lawful processing. Refusing optional consent will not block unrelated features.</p>
+        <p>We do not use one acceptance of this Privacy Policy as consent to every type of processing.</p>
+        <h2>6. How sharing works and who receives data</h2>
+        <h3>6.1 Other KardMego users</h3>
+        <p>Data is disclosed to family members, request participants and recipients only according to the feature and access you select. Shared card access may expose store name, barcode/QR value/type, notes and timing/status. Participants who currently have access to a shared shopping list can see and edit relevant list information and view its active item photos. Photo access is checked by the server for each temporary download grant; removing family/list access blocks new server grants after the change is synchronised. Requesters and card owners may see request status and limited profile/display information.</p>
+        <h3>6.2 Processors and platform providers</h3>
+        <p>We use providers to operate the Service, including providers in the following categories:</p>
+        <ul><li>Supabase for authentication, database records, access control, Edge Functions and related infrastructure;</li><li>Cloudflare Workers and private R2 object storage for processed shopping-item photo upload, delivery and cleanup;</li><li>email-delivery infrastructure for confirmation and password-reset messages;</li><li>Apple and Google for app distribution, operating-system services, notifications, permissions and optional device backup;</li><li>website hosting and domain providers;</li><li>support, security, logging or monitoring providers, if enabled.</li></ul>
+        <p>Processors may use data only under our instructions and appropriate contractual safeguards, except where a provider acts independently under law or its own platform terms.</p>
+        <h3>6.3 Authorities and legal recipients</h3>
+        <p>We may disclose information when reasonably necessary to comply with law, a binding order, protect rights or safety, investigate abuse, or establish or defend legal claims. We will assess requests and disclose only what is lawfully required.</p>
+        <h3>6.4 Business transfer</h3>
+        <p>If the Service or operator is reorganised, merged or transferred, relevant data may be transferred with appropriate notice, confidentiality and data-protection safeguards. We do not sell personal data.</p>
+        <h2>7. International transfers</h2>
+        <p>Some providers may process data outside the EEA or your country. Where GDPR transfer restrictions apply, we use an applicable lawful transfer mechanism, such as an adequacy decision, Standard Contractual Clauses with appropriate supplementary measures, or another mechanism permitted by law. You may contact us for information about the safeguards relevant to your data.</p>
+        <p>The primary region of the current Supabase project is <code>eu-west-1</code> (Ireland). Other providers may be established or process data elsewhere under their own platform terms and data notices.</p>
+        <h2>8. Retention</h2>
+        <p>We keep personal data only for as long as necessary for the stated purpose, legal obligations, security and claims.</p>
+        <p>In particular:</p>
+        <ul><li>active account, card and current shopping data: while the account/feature is active, then deleted after an account or item deletion request, subject to short operational and backup periods;</li><li>local card-front and receipt images: until you delete the image/card/history, clear app data, uninstall the app or delete the account using a flow that removes local files;</li><li>active cloud-synchronised item photos: while the relevant item remains active and the photo is needed; after replacement/removal or the end/deletion of the item or list, user access ends immediately and the old private R2 object is scheduled for permanent deletion within 24 hours;</li><li>unfinished item-photo uploads: never shown as active and scheduled for permanent deletion no later than 24 hours after they become stale or are cancelled;</li><li>item-photo offline cache: stored in app-private device files while the photo remains available; removed after a successful snapshot or access check confirms replacement, removal or loss of access, during supported account cleanup, when app data is cleared, or when the app is uninstalled. A device that remains offline may retain its existing cache until it reconnects or its app data is removed;</li><li>completed shopping archives: automated cleanup is configured to delete entries older than 90 days and retain no more than 30 newest entries per card;</li><li>share requests: pending requests expire after 7 days; unreferenced requests older than 90 days are deleted;</li><li>temporary shared access: disabled when it expires, with access records retained only as needed for security and legal claims;</li><li>guest profiles: until deletion or account linkage;</li><li>push tokens: until notifications are disabled, the token becomes invalid or the account is deleted;</li><li>legal acceptance records: for as long as necessary to demonstrate acceptance, comply with law and establish or defend claims;</li><li>support and security logs: only for as long as needed to provide support, protect the Service and meet legal obligations; and</li><li>backups: if data remains in protected backups after deletion, it is isolated from ordinary use and removed through the applicable backup cycle.</li></ul>
+        <h2>9. Account and data deletion</h2>
+        <p>Account holders can request deletion in the app and at <code>https://kardmego.app/legal/delete-account</code>. We may verify identity to prevent unauthorised deletion. The deletion function removes the authentication account and associated backend records, including device tokens, shopping data, profile, related account records and the guest profile claimed by that account. After a successful response, the app attempts to remove identified local account caches, media, guest credentials, local legal cache, language/theme/country/location preferences and the local session. If that local cleanup is interrupted or device storage is unavailable, some local data may remain until cleanup succeeds or you clear the app data or uninstall the app. We do not describe this process as crash-atomic or as an absolute local-erasure guarantee.</p>
+        <p>Deletion cannot remove:</p>
+        <ul><li>information another user independently copied or retained outside KardMego;</li><li>records we must keep temporarily to comply with law, resolve disputes, prevent fraud or demonstrate a legal transaction;</li><li>data in encrypted backups until the normal backup cycle expires, provided it is isolated from ordinary use; or</li><li>data controlled independently by a retailer, Apple, Google or another third party.</li></ul>
+        <p>Deleting a single card, photo or shopping record should remove it from active app storage according to the feature. Contact us if the in-app control is unavailable.</p>
+        <h2>10. Your data-protection rights</h2>
+        <p>Subject to applicable law, you may have the right to:</p>
+        <ul><li>receive information and a copy of your personal data;</li><li>correct inaccurate or incomplete data;</li><li>request deletion;</li><li>restrict processing;</li><li>receive data you provided in a structured, commonly used and machine-readable format and transmit it to another controller where portability applies;</li><li>object to processing based on legitimate interests;</li><li>withdraw consent at any time for future processing; and</li><li>lodge a complaint with a supervisory authority.</li></ul>
+        <p>To exercise a right, contact <code>yumikami.app@gmail.com</code> or use available in-app controls. Describe the account and request. We may ask for proportionate identity verification. We will respond within the period required by law, normally one month under GDPR, subject to permitted extensions. We will explain any lawful refusal and your complaint options.</p>
+        <p>The Czech supervisory authority is Úřad pro ochranu osobních údajů (ÚOOÚ), Pplk. Sochora 27, 170 00 Praha 7, Czech Republic; email <code>posta@uoou.gov.cz</code>; website <code>https://uoou.gov.cz/</code>.</p>
+        <h2>11. Permissions and choices</h2>
+        <ul><li><strong>Location:</strong> deny or revoke in device settings; store-country and nearby matching may use manual country selection instead.</li><li><strong>Camera/photo library:</strong> deny or revoke; photographing or choosing card/item/receipt images will be unavailable.</li><li><strong>Notifications:</strong> disable in device settings; you may need to open the app to see requests or updates.</li><li><strong>Sharing:</strong> change card access, revoke a recipient or remove a family member using the relevant controls.</li><li><strong>Account deletion:</strong> use the in-app account screen or external deletion resource.</li></ul>
+        <p>Operating-system providers control their permission interface and may retain their own platform records.</p>
+        <h2>12. Security</h2>
+        <p>We use measures intended to protect data, including encrypted network transport, secure device storage for session/guest secrets, database access controls, row-level security and restricted privileged operations. No system is completely secure, and we cannot guarantee absolute security.</p>
+        <p>You should secure your device and email account, install updates, avoid sharing credentials, and revoke card access that is no longer needed. Contact <code>yumikami.app@gmail.com</code> if you suspect unauthorised access. We will notify affected users and authorities when law requires.</p>
+        <h2>13. Children</h2>
+        <p>KardMego is not intended for children under 16. We do not knowingly create accounts for children below that age. If you believe a child has provided data without valid authorisation, contact us so we can investigate and delete it where required.</p>
+        <h2>14. Automated decisions and profiling</h2>
+        <p>KardMego may categorise shopping items or match requests using store and approximate location information. The current Service does not make decisions based solely on automated processing that produce legal or similarly significant effects on you, and it does not use personal data for advertising profiles.</p>
+        <p>If this changes, we will provide the information, safeguards and choices required by law before enabling the change.</p>
+        <h2>15. Cookies, analytics and tracking</h2>
+        <p>The native app does not currently use advertising cookies, advertising identifiers, cross-app tracking or a general product-analytics SDK. SecureStore, local files and application databases are used for essential app functions and are explained above.</p>
+        <p>The KardMego website will have a separate cookie/technology notice based on its real configuration. Strictly necessary technologies may operate without optional consent where law permits. Optional analytics, advertising or third-party embeds will not load before valid consent where consent is required. Refusing must be as easy as accepting, and choices must be withdrawable.</p>
+        <p>If any analytics, crash-reporting, advertising, attribution or tracking SDK is added to the app, this Policy and store disclosures will be updated and any required consent/Apple App Tracking Transparency permission will be obtained before the SDK performs optional tracking.</p>
+        <h2>16. Changes to this Policy</h2>
+        <p>We will display the current version and effective date. Material changes will be communicated in the app or by another appropriate channel before they take effect where required. Previous versions will be archived at <code>/legal/archive/</code>.</p>
+        <p>A Privacy Policy update does not turn optional processing into lawful consent. If a new purpose requires consent, we will ask separately.</p>
+        <h2>17. Contact and complaints</h2>
+        <p>Controller: <code>Yuliia Kazmina, entrepreneur-natural person (OSVČ), IČO 17578931</code> Privacy questions and rights requests: <code>yumikami.app@gmail.com</code> Postal address: <code>Podbělohorská 1341/23, Smíchov, 15000 Praha 5, Czech Republic</code> Support: <code>yumikami.app@gmail.com</code> Supervisory authority: <code>Úřad pro ochranu osobních údajů (ÚOOÚ), Pplk. Sochora 27, 170 00 Praha 7, Czech Republic; posta@uoou.gov.cz; https://uoou.gov.cz/</code></p>
+        <p>If you have a concern, please contact us first so we can try to resolve it. You always retain the right to contact the competent supervisory authority.</p>
+      </article>
+    </main>
+
+    <footer>
+      <span>Copyright © 2026 Yuliia Kazmina. KardMego is not affiliated with any retailer.</span>
+      <nav class="footer-links" aria-label="Legal and account links">
+        <a href="../../support.html">Support</a>
+        <a href="../delete-account/">Account deletion</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>
