@@ -5,6 +5,11 @@ Static public pages for App Store Connect:
 - `privacy.html` - Privacy Policy URL
 - `support.html` - Support URL
 - `index.html` - simple landing page
+- `download/` - Czech download page with direct App Store and Google Play links
+
+The current production site is hosted on Hetzner. The download page was
+published to `https://kardmego.app/download/` on 7 November 2026. Only the
+`download/` directory was deployed.
 
 ## Fastest publishing option
 
